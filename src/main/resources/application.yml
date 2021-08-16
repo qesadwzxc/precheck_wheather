@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: wheather
+
+weather-com:
+  hosts: http://www.weather.com.cn
+  province-interface: /data/city3jdata/china.html
+  city-interface: /data/city3jdata/provshi/
+  country-interface: /data/city3jdata/station/
+  weather-interface: /data/sk/
