@@ -3,6 +3,8 @@ package com.epam.weather.service;
 import com.alibaba.fastjson.JSONObject;
 import com.epam.weather.entity.WeatherInfoResp;
 
+import java.util.Map;
+
 /**
  * @author Lee
  * service from weather.com
@@ -12,26 +14,26 @@ public interface WeatherComService {
      * Get province list for china
      * @return
      */
-    public JSONObject getProvinceList();
+    Map<String, String> getProvinceList();
 
     /**
      * Get city list for specific province
      * @param provinceId
      * @return
      */
-    public JSONObject getCityList(String provinceId);
+    Map<String, String> getCityList(String provinceId);
 
     /**
      * Get country list for specific city
      * @param cityId
      * @return
      */
-    public JSONObject getCountryList(String cityId);
+    Map<String, String> getCountryList(String cityId);
 
     /**
      * Get weather info for specific country
      * @param countryId
      * @return
      */
-    public WeatherInfoResp getWeatherInfo(String countryId);
+    WeatherInfoResp getWeatherInfo(String countryId);
 }
